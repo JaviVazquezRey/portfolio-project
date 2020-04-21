@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+''' 
+Whenever you are adding some static file, we want to have the MEDIA_URL and MEDIA_ROOT. 
+It essentially says:
+  - MEDIA_ROOT: "This is where you should look for the information"
+  - MEDIA_URL: "This is the URL Path you should use for this"
+ '''
