@@ -8,11 +8,13 @@ class user(models.Model):
     # Types of roles
     Developer = 'Dev' #, _('Developer')
     Designer = 'UI/UX'   #, _('Designer')
+    Consultant = 'Consultant'   #, _('Consultant')
     Manager = 'Manager'     #, _('Manager')
 
     roleChoices = [
         (Developer, 'Developer'), 
         (Designer, 'Designer'), 
+        (Consultant, 'Consultant'), 
         (Manager, 'Manager')
     ]
 
