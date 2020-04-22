@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # New Apps
     'jobs.apps.JobsConfig',
+    'blog.apps.BlogConfig',
+    'user.apps.UserConfig',
+    'post.apps.PostConfig',
     # Default Apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -132,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # To Store images
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Every time someone is saving a field, it will create a new folder called Media at the level of the dabatase (but it can be stored even out of the project in our server)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Every time someone is saving a file, it will create a new folder called Media at the level of the dabatase (but it can be stored even out of the project in our server)
 
 # To Access images
 MEDIA_URL = '/media/' # 
