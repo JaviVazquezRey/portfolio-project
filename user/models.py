@@ -6,8 +6,8 @@ class user(models.Model):
     generatedId = 4
 
     # Types of roles
-    Developer = 'Developer' #, _('Developer')
-    Designer = 'Designer'   #, _('Designer')
+    Developer = 'Dev' #, _('Developer')
+    Designer = 'UI/UX'   #, _('Designer')
     Manager = 'Manager'     #, _('Manager')
 
     roleChoices = [
